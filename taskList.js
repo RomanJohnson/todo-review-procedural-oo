@@ -1,4 +1,4 @@
-/*
+
 // USING AN Immediately-Invoked Function Expression (IIFE)
 const TaskList = (function() {
   currentItemId = 0
@@ -26,7 +26,7 @@ const TaskList = (function() {
     }
   }
 })() //we wrap TaskList class in a function in order to close over it and create a private currentItemId variable. Below I will show you several different ways to accomplish the same task
-*/
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // Using the pre-ES6 function; remember: the `class` keyword is syntactic sugar over this:
