@@ -43,9 +43,8 @@ document.addEventListener("DOMContentLoaded", () => { //wait for HTML content to
       const itemIdToDelete = parseInt(event.target.parentElement.dataset.id)
       /* event is the HTML element that received the click action. Since we are only dealing with clicks on the delete button, event is that button within the if statement. The parentElement is the <li> that wraps it: `<li data-id="${itemIds}">${newItemName}<button class="delete">X</button></li>` the button is NESTED within the <li>, therefore parentElement is that parent <li>. We cast (convert) the id to an integer so we can check it against the id stored on each item object */
 
-      allListItems = allListItems.filter(item => item.id !== itemIdToDelete)
-      appendItemsToDom()
+      allListItems = allListItems.filter(item => item.id !== itemIdToDelete) //mutate allListItems so everything EXCEPT the deleted element is in the array
+      appendItemsToDom() //re render the list
     }
   }
-
 })
